@@ -18,3 +18,7 @@ A Ciência da Computação não estuda apenas como utilizar computadores, mas pr
 - Banco de dados.
 - Robótica.
 - Redes de computadores.
+
+## 2. História da computação
+
+A computação surgiu da
