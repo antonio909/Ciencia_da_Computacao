@@ -207,3 +207,113 @@ Existem diversas linguagens, cada uma com características e aplicações difere
 |---|---|
 | C | Sistemas operacionais e programação de baixo nível |
 | C++ | Jogos, sistemas e aplicações de alto desempenho |
+| Java | Aplicações empresariais e sistemas |
+| Python | Inteligência artificial, automação e ciência de dados |
+| JavaScript | Desenvolvimento web |
+| C# | Aplicações desktop e desenvolvimento de jogos |
+| PHP | Desenvolvimento backend |
+| Rust | Sistemas e aplicações de alto desempenho |
+
+## 8. Áreas da Ciência da Computação
+
+A Ciência da Computação possui diversas áreas de especialização.
+
+### 8.1 Desenvolvimento de Software
+
+Estuda a criação, manutenção e evolução de programas e sistemas.
+
+### 8.2 Inteligência Artificial
+
+Estuda como desenvolver sistemas capazes de realizar tarefas que normalmente exigiriam inteligência humana.
+
+### 8.3 Segurança da Informação
+
+Estuda técnicas para proteger sistemas, redes e informações contra acessos não autorizados e ameaças digitais.
+
+### 8.4 Banco de Dados
+
+Estuda formas de armazenar, organizar, consultar e gerenciar informações.
+
+### 8.5 Redes de Computadores
+
+Estuda como computadores e outros dispositivos se comunicam e compartilham informações.
+
+### 8.6 Engenharia de Software
+
+Estuda métodos, processos e ferramentas utilizados para desenvolver softwares de maneira organizada e confiável.
+
+### 8.7 Computação Gráfica
+
+Estuda técnicas para criar e manipular imagens, animações e ambientes tridimensionais.
+
+## 9. Por que estudar Ciência da Computação?
+
+Estudar Ciência da Computação permite compreender os fundamentos da tecnologia e desenvolver habilidades para resolver problemas.
+
+Entre os principais benefícios estão:
+
+- Desenvolver raciocínio lógico.
+- Aprender a resolver problemas complexos.
+- Compreender o funcionamento dos computadores.
+- Criar programas e sistemas.
+- Desenvolver pensamento computacional.
+- Conhecer diferentes áreas da tecnologia.
+
+## 10. Resumo da Aula
+
+Nesta primeira aula, aprendemos:
+
+1. O que é Ciência da Computação.
+2. A história e a evolução da computação.
+3. O que é um computador.
+4. A diferença entre hardware e software.
+5. O conceito de programação.
+6. O que são algoritmos.
+7. O que são linguagens de programação.
+8. As principais áreas da Ciência da Computação.
+9. A importância de estudar computação.
+
+---
+
+## 11. Exercícios de Fixação
+
+**1. O que é Ciência da Computação?**
+
+**2. Qual é a diferença entre hardware e software?**
+
+**3. O que é um algoritmo?**
+
+**4. Qual é a função do processador (CPU)?**
+
+**5. O que é programação?**
+
+**6. Quem é frequentemente reconhecida como a primeira programadora da história?**
+
+**7. Cite cinco linguagens de programação?**
+
+**8. Quais são as quatro etapas básicas do funcionamento de um computador?**
+
+**9. O que é inteligência artificial?**
+
+**10. Qual é a importância da Ciência da Computação para a sociedade?**
+
+---
+
+## 12. Próxima Aula
+
+**Aula 2 - Fundamentos da Computação**
+
+Conteúdos que serão estudados:
+
+- Sistemas de numeração.
+- Sistema binário.
+- Sistema decimal.
+- Sistema hexadecimal.
+- Conversão entre sistemas numéricos.
+- Bits e Bytes.
+- Representação de dados nos computadores.
+- Código ASCII e Unicode.
+
+---
+
+*Fim da Aula 1 - Introdução à Ciência da Computação.*
