@@ -1,92 +1,126 @@
-# Introdução à Ciência da Computação
+# Conceitos Básicos sobre Computadores
 
-## 1. O que é Ciência da Computação?
+## 1. Introdução
 
-A **Ciência da Computação** é a área do conhecimento que estuda os computadores, os algoritmos, a programação, o processamento de dados e os fundamentos teóricos da computação.
+O computador é uma máquina eletrônica capaz de receber, processar, armazenar e transmitir informações. Ele executa instruções fornecidas por programas para realizar diferentes tarefas.
 
-Seu principal objetivo é compreender como os computadores funcionam, como resolver problemas utilizando a tecnologia e como desenvolver sistemas capazes de executar diferentes tarefas.
+Atualmente, os computadores estão presentes em praticamente todas as áreas da sociedade, como educação, medicina, engenharia, comunicação, entretenimento e desenvolvimento de softwares.
 
-A Ciência da Computação não estuda apenas como utilizar computadores, mas principalmente como eles funcionam e como podemos criar solução computacionais.
+Para compreender como um computador funciona e como desenvolver programas, precisamos conhecer alguns conceitos fundamentais:
 
-**Exemplos de aplicações:**
+- Hardware
+- Software
+- Sistema Operacional
+- Compiladores
+- Representação Interna de Dados
+- Linguagem de Programação.
 
-- Desenvolvimento de softwares e aplicativos
-- Criação de jogos digitais.
-- Desenvolvimento de inteligência artificial.
-- Segurança da informação.
-- Desenvolvimento de sistemas operacionais.
-- Banco de dados.
-- Robótica.
-- Redes de computadores.
+---
 
-## 2. História da computação
+## 2. Hardware
 
-A computação surgiu da necessidade humana de realizar cálculos e processar informações.
+**O que é Hardware?**
 
-Ao longo da história, diferentes ferramentas e máquinas foram desenvolvidas até chegarmos aos computadores modernos.
+Hardware é o conjunto de componentes físicos de um computador, ou seja, todas as partes que podemos tocar.
 
-### 2.1 Ábaco
+Esses componentes são responsáveis por executar operações, armazenar informações, receber dados e apresentar resultados.
 
-O ábaco é considerado uma das primeiras ferramentas utilizadas para realizar cálculos matemáticos.
+**Principais componentes de Hardware**
 
-Ele permite executar operações como:
+### 2.1 Processador (CPU)
 
-- Adição.
-- Subtração.
-- Multiplicação.
-- Divisão.
+A CPU (Central Processing Unit), também conhecida como Unidade Central de Processamento, é responsável por executar instruções e realizar operações matemáticas e lógicas.
 
-### 2.2 Máquinas Mecânicas
+É considerada um dos principais componentes do computador.
 
-Com o avanço da tecnologia, surgiram máquinas capazes de realizar cálculos automaticamente.
+Suas principais funções são:
 
-Alguns nomes importantes:
+- Executar instruções dos programas.
+- Realizar cálculos matemáticos.
+- Executar operações lógicas.
+- Coordenar operações entre componentes.
 
-- **Blaise Pascal:** desenvolveu a Pascalina, uma máquina mecânica de calcular.
-- **Gottfried Leibniz:** desenvolveu uma máquina capaz de realizar operações matemáticas mais complexas.
-- **Charles Babbage:** idealizou a Máquina Analítica, considerado um dos primeiros projetos de computador de uso geral.
+A CPU possui algumas partes importantes:
 
-### 2.3 Ada Lovelace
+- **Unidade de Controle (UC):** coordena a execução das instruções.
+- **Unidade Lógica e Aritmética (ULA):** realiza operações matemáticas e lógicas.
+- **Registradores:** pequenas áreas de armazenamento extremamente rápidas dentro do processador.
 
-Ada Lovelace é frequentemente reconhecida como a primeira programadora da história.
+### 2.2 Memória RAM
 
-Ela desenvolveu um algoritmo destinado à Máquina Analítica de Charles Babbage.
+RAM significa Random Access Memory (Memória de Acesso Aleatório).
 
-Seu trabalho foi importante porque demonstrou que máquinas poderiam executar instruções além de simples cálculos matemáticos.
+É responsável por armazenar temporariamente os dados e programas que estão sendo utilizados pelo computador.
 
-### 2.4 Computadores Modernos
+Características:
 
-Os primeiros computadores eletrônicos eram enormes, consumiam muita energia e possuíam capacidade de processamento limitada em comparação aos computadores atuais.
+- Armazenamento temporário.
+- Permite acesso rápido aos dados.
+- Perde as informações quando o computador é desligado.
+- Quanto maior sua capacidade, mais dados e programas podem permanecer disponíveis simultaneamente.
 
-Com o desenvolvimento dos transistores, circuitos integrados e microprocessadores, os computadores ficaram menores, mais rápidos e mais acessíveis.
+### 2.3 Armazenamento (HD e SSD)
 
-## 3. O que é um Computador?
+São dispositivos responsáveis por armazenar permanentemente arquivos, programas e o sistema operacional.
 
-Um **computador** é uma máquina eletrônica capaz de receber dados, processá-los, armazená-los e produzir informações.
+Existem dois tipos bastante conhecidos:
 
-Seu funcionamento pode ser dividido em quatro etapas:
+**HD (Hard Disk):**
 
-1. **Entrada (Input):** recebe dados do usuário ou de outros dispositivos.
-2. **Processamento (Processing):** executa operações sobre dados.
-3. **Saída (Output):** apresenta os resultados.
-4. **Armazenamento (Storage):** guarda dados e informações.
+- Utiliza discos magnéticos.
+- Possui partes mecânicas.
+- Geralmente apresenta menor velocidade que um SSD.
 
-### Exemplo prático
+**SSD (Solid State Drive):**
 
-Imagine uma calculadora:
+- Utiliza memória flash.
+- Não possui partes mecânicas móveis.
+- Geralmente oferece velocidades maiores de leitura e gravação.
 
-- Entrada: o usuário informa `10 + 5`.
-- Processamento: a calculadora realiza a adição.
-- Saída: apresenta o resultado `15`.
-- Armazenamento: pode manter temporariamente os valores utilizados.
+### 2.4 Placa-mãe
 
-## 4. Hardware e Software
+A placa-mãe é a principal placa de circuitos do computador.
 
-Um computador é formado por dois elementos fundamentais: hardware e software.
+Ela conecta os componentes e permite a comunicação entre eles.
 
-### 4.1 Hardware
+Nela são conectados:
 
-Hardware representa todas as partes físicas de um computador, ou seja, os componentes que podemos tocar.
+- Processador.
+- Memória RAM.
+- Dispositivos de armazenamento.
+- Placa de vídeo.
+- Placas de expansão.
+
+### 2.5 Dispositivos de Entrada e Saída
+
+Os dispositivos de entrada permitem enviar informações para o computador.
+
+Exemplos:
+
+- Teclado.
+- Mouse.
+- Microfone.
+- Scanner.
+- Webcam.
+
+Os dispositivos de saída permitem apresentar informações processadas pelo computador.
+
+Exemplos:
+
+- Monitor.
+- Impressora.
+- Alto-falantes.
+- Fones de ouvido.
+
+---
+
+## 3. Software
+
+**O que é Software?**
+
+Software é o conjunto de programas, instruções e dados que orientam o funcionamento de um computador.
+
+Diferente do hardware, o software não é físico. Ele representa a parte lógica do sistema computacional.
 
 Exemplos:
 
