@@ -263,88 +263,129 @@ Observação: existem linguagens e ambientes que combinam compilação, interpre
 
 ## 6. Representação Interna de Dados
 
-Estuda formas de armazenar, organizar, consultar e gerenciar informações.
+**Como o computador representa informações?**
 
-### 8.5 Redes de Computadores
+Os computadores utilizam sinais elétricos para representar informações internamente.
 
-Estuda como computadores e outros dispositivos se comunicam e compartilham informações.
+Essas informações são representadas por meio de dois estados fundamentais:
 
-### 8.6 Engenharia de Software
+- 0 (zero).
+- 1 (um).
 
-Estuda métodos, processos e ferramentas utilizados para desenvolver softwares de maneira organizada e confiável.
+Esse sistema é conhecido como sistema binário.
 
-### 8.7 Computação Gráfica
+Cada dígito binário é chamado de **bit** (Binary Digit).
 
-Estuda técnicas para criar e manipular imagens, animações e ambientes tridimensionais.
+### 6.1 Bit e Byte
 
-## 9. Por que estudar Ciência da Computação?
+**Bit:** menor unidade de informação digital, podendo assumir os valores 0 ou 1.
 
-Estudar Ciência da Computação permite compreender os fundamentos da tecnologia e desenvolver habilidades para resolver problemas.
+**Byte:** conjunto de 8 bits.
 
-Entre os principais benefícios estão:
+Exemplo:
 
-- Desenvolver raciocínio lógico.
-- Aprender a resolver problemas complexos.
-- Compreender o funcionamento dos computadores.
-- Criar programas e sistemas.
-- Desenvolver pensamento computacional.
-- Conhecer diferentes áreas da tecnologia.
+```text
+01000001
+```
 
-## 10. Resumo da Aula
+Esse conjunto possui 8 bits, portanto representa um byte.
 
-Nesta primeira aula, aprendemos:
+### 6.2 Sistema Binário
 
-1. O que é Ciência da Computação.
-2. A história e a evolução da computação.
-3. O que é um computador.
-4. A diferença entre hardware e software.
-5. O conceito de programação.
-6. O que são algoritmos.
-7. O que são linguagens de programação.
-8. As principais áreas da Ciência da Computação.
-9. A importância de estudar computação.
+O sistema binário utiliza apenas dois algarismos: 0 e 1.
+
+Diferentemente do sistema decimal, que utiliza dez algarismos (0 até 9), o sistema binário utiliza potências de 2.
+
+Exemplo:
+
+```text
+Decimal: 13
+
+Binário: 1101
+```
+
+A conversão pode ser demonstrada assim:
+
+\[
+1101_2 = 1(8) + 1(4) + 0(2) + 1(1)
+\]
+
+\[
+1101_2 = 13_{10}
+\]
+
+### 6.3 Representação de Caracteres
+
+Os computadores também precisam representar letras, números e símbolos.
+
+Para isso, utilizam padrões de codificação de caracteres.
+
+Dois exemplos importantes são:
+
+- **ASCII:** padrão de codificação que representa caracteres utilizando valores numéricos.
+- **Unicode:** padrão que permite representar caracteres de praticamente todos os sistemas de escrita.
+
+Exemplo:
+
+A letra `A` possui o valor decimal 65 na tabela ASCII.
+
+Sua representação binária em ASCII é:
+
+```text
+01000001
+```
+
+### 6.4 Representação de Números
+
+Os computadores precisam representar diferentes tipos de números.
+
+**Números inteiros:**
+
+Exemplo:
+
+```text
+10
+25
+-15
+100
+```
+
+**Números reais:**
+
+Exemplo:
+
+```text
+3.14
+10.5
+-2.75
+```
+
+Em linguagens como C++, existem tipos específicos para representar esses valores:
+
+```cpp
+int idade = 20;
+
+float altura = 1.75f;
+
+double pi = 3.1415926535;
+```
+
+### 6.5 Representação de Imagens, Áudio e Vídeo
+
+Além de textos e números, os computadores também armazenam conteúdos multimídia.
+
+- **Imagens:** representadas por pixels e valores de cores.
+- **Áudio:** representado por amostras digitais de sinais sonoros.
+- **Vídeo:** representado por uma sequência de quadros (frames), geralmente acompanhada de áudio.
+
+Todos esses dados são armazenados internamente utilizando bits.
 
 ---
 
-## 11. Exercícios de Fixação
+## 7. Linguagem de Programação
 
-**1. O que é Ciência da Computação?**
+**O que é uma Linguagem de Programação?**
 
-**2. Qual é a diferença entre hardware e software?**
+Uma linguagem de programação é um conjunto de regras sintáticas e semânticas que permite escrever instruções para que um computador execute determinadas tarefas.
 
-**3. O que é um algoritmo?**
-
-**4. Qual é a função do processador (CPU)?**
-
-**5. O que é programação?**
-
-**6. Quem é frequentemente reconhecida como a primeira programadora da história?**
-
-**7. Cite cinco linguagens de programação?**
-
-**8. Quais são as quatro etapas básicas do funcionamento de um computador?**
-
-**9. O que é inteligência artificial?**
-
-**10. Qual é a importância da Ciência da Computação para a sociedade?**
-
----
-
-## 12. Próxima Aula
-
-**Aula 2 - Fundamentos da Computação**
-
-Conteúdos que serão estudados:
-
-- Sistemas de numeração.
-- Sistema binário.
-- Sistema decimal.
-- Sistema hexadecimal.
-- Conversão entre sistemas numéricos.
-- Bits e Bytes.
-- Representação de dados nos computadores.
-- Código ASCII e Unicode.
-
----
-
-*Fim da Aula 1 - Introdução à Ciência da Computação.*
+Por meio dessas linguagens, os desenvolvedores conseguem criar programas, aplicativos, jogos, sistemas operacionais e diversos outros softwares.
