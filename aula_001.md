@@ -122,149 +122,146 @@ Software é o conjunto de programas, instruções e dados que orientam o funcion
 
 Diferente do hardware, o software não é físico. Ele representa a parte lógica do sistema computacional.
 
-Exemplos:
+Sem software, o hardware não teria instruções para executar tarefas específicas.
 
-- Processador (CPU).
-- Memória RAM.
-- Placa-mãe.
-- SSD e HD.
-- Placa de vídeo (GPU).
-- Teclado.
-- Mouse.
-- Monitor.
+**Tipos de Software**
 
-### 4.2 Software
+### 3.1 Software de Sistema
 
-Software representa os programas e sistemas responsáveis por controlar o funcionamento do computador e executar tarefas.
+São programas responsáveis por controlar e gerenciar o funcionamento do computador.
 
 Exemplos:
 
 - Windows.
 - Linux.
 - macOS.
+- Drivers de dispositivos.
+
+### 3.2 Software Aplicativo
+
+São programas desenvolvidos para ajudar os usuários a realizar tarefas específicas.
+
+Exemplos:
+
 - Google Chrome.
 - Microsoft Word.
-- Visual Studio Code.
-- Jogos digitais.
+- Photoshop.
+- VLC Media Player.
+- Jogos eletrônicos.
 
-### 4.3 Diferença entre Hardware e Software
+### 3.3 Software de Programação
 
-| Hardware | Software |
-|---|---|
-| Parte física do computador | Parte lógica do computador |
-| Pode ser tocado | Não pode ser tocado fisicamente |
-| Processador | Sistema operacional |
-| Memória RAM | Navegador |
-| Teclado | Editor de código |
-| Monitor | Aplicativos |
+São ferramentas utilizadas pelos desenvolvedores para criar outros programas.
 
-## 5. O que é Programação?
+Exemplos:
 
-**Programação** é o processo de criar instruções que um computador pode executar para realizar determinadas tarefas.
+- Compiladores.
+- Interpretadores.
+- Editores de código.
+- Depuradores (Debuggers).
+- Ambientes de desenvolvimento integrados (IDEs).
 
-Essas instruções são escritas utilizando linguagens de programação.
+---
 
-Por meio da programação, podemos desenvolver:
+## 4. Sistema Operacional
 
-- Aplicativos.
-- Sites.
-- Jogos.
-- Sistemas empresariais.
-- Inteligência artificial.
-- Sistemas embarcados.
+**O que é um Sistema Operacional?**
 
-### Exemplo de programação
+O Sistema Operacional (SO) é um software responsável por gerenciar os recursos do computador e permitir a interação entre o usuário, os programas e o hardware.
 
-Observe um exemplo simples utilizando C++:
+Ele funciona como uma camada intermediária entre os aplicativos e os componentes físicos.
+
+**Principais funções de um Sistema Operacional**
+
+**1. Gerenciamento de Processos**
+
+Controla os programas que estão sendo executados no computador.
+
+**2. Gerenciamento de Memória**
+
+Controla a utilização da memória RAM pelos programas.
+
+**3. Gerenciamento de Arquivos**
+
+Organiza arquivos e diretórios, permitindo criar, modificar, copiar e excluir informações.
+
+**4. Gerenciamento de Dispositivos**
+
+Controla a comunicação com dispositivos como teclado, mouse, impressora e armazenamento.
+
+**5. Interface com o Usuário**
+
+Permite que o usuário interaja com o computador por meio de interfaces gráficas ou linhas de comando.
+
+**Exemplos de Sistemas Operacionais**
+
+- **Windows:** sistema operacional desenvolvido pela Microsoft.
+- **Linux:** família de sistemas operacionais de código aberto.
+- **macOS:** sistema operacional dos computadores Mac.
+- **Android:** sistema operacional utilizado em diversos dispositivos móveis.
+- **iOS:** sistema operacional utilizado em dispositivos móveis da Apple.
+
+---
+
+## 5. Compiladores
+
+**O que é um Compilador?**
+
+Um compilador é um programa responsável por traduzir o código-fonte escrito em uma linguagem de programação para uma representação que possa ser executada ou utilizada por outras ferramentas.
+
+Os computadores executam instruções em linguagem de máquina, enquanto os programadores geralmente escrevem códigos em linguagens de alto nível, como C, C++ e Java.
+
+O compilador realiza a tradução entre essas representações.
+
+**Como funciona a compilação?**
+
+**Etapas principais:**
+
+ 1. **Código-fonte:** código escrito pelo programador.
+ 2. **Compilação:** tradução do código para uma representação de nível mais baixo.
+ 3. **Código-objeto:** resultado intermediário da compilação.
+ 4. **Linkedição:** combinação dos arquivos necessários e bibliotecas.
+ 5. **Executável:** programa pronto para ser executado, conforme a plataforma.
+
+**Exemplo em C++**
 
 ```cpp
 #include <iostream>
 
 int main() {
-  std::cout << "Ola, mundo!";
+    std::cout << "Hello, World!" << std::endl;
 
-  return 0;
+    return 0;
 }
 ```
 
-**Resultado:**
+Para compilar esse programa utilizando o compilador GCC ou G++:
 
-```text
-Ola, mundo!
+```bash
+g++ main.cpp -o programa
 ```
 
-Nesse exemplo, criamos um programa que apresenta uma mensagem na tela.
+Para executar no Windows:
 
-## 6. O que é um Algoritmo?
-
-Um **algoritmo** é uma sequência finita e organizada de instruções utilizadas para resolver um problema ou executar uma tarefa.
-
-Os algoritmos estão presentes em diversas atividades do cotidiano.
-
-### Exemplo: preparar um café
-
-1. Pegar uma xícara.
-2. Adicionar café.
-3. Aquecer a água.
-4. Despejar a água na xícara.
-5. Misturar.
-6. Servir o café.
-
-Essa sequência representa um algoritmo porque descreve as etapas necessárias para alcançar um resultado.
-
-### Exemplo de algoritmo matemático
-
-Problema: calcular a soma de dois números.
-
-```text
-INÍCIO
-
-  Ler o primeiro número
-  Ler o segundo número
-
-  Calcular a soma
-
-  Mostrar o resultado
-
-FIM
+```powershell
+.\programa.exe
 ```
 
-## 7. O que são Linguagens de Programação?
+O compilador transforma o código-fonte em um executável que pode ser executado pelo sistema operacional.
 
-Linguagens de programação são linguagens utilizadas para escrever instruções que podem ser interpretadas ou compiladas para execução pelo computador.
+**Compilador vs Interpretador**
 
-Existem diversas linguagens, cada uma com características e aplicações diferentes.
-
-### Principais linguagens
-
-| Linguagem | Principais aplicações |
+| Compilador | Interpretador |
 |---|---|
-| C | Sistemas operacionais e programação de baixo nível |
-| C++ | Jogos, sistemas e aplicações de alto desempenho |
-| Java | Aplicações empresariais e sistemas |
-| Python | Inteligência artificial, automação e ciência de dados |
-| JavaScript | Desenvolvimento web |
-| C# | Aplicações desktop e desenvolvimento de jogos |
-| PHP | Desenvolvimento backend |
-| Rust | Sistemas e aplicações de alto desempenho |
+| Traduz o programa antes da execução, conforme o modelo utilizado. | Executa instruções por meio de um processo de interpretação. |
+| Pode gerar um executável independente. | Geralmente depende de um ambiente de execução. |
+| Exemplo: GCC e Clang. | Exemplo: interpretador Python. |
 
-## 8. Áreas da Ciência da Computação
+Observação: existem linguagens e ambientes que combinam compilação, interpretação e compilação durante a execução (JIT).
 
-A Ciência da Computação possui diversas áreas de especialização.
+---
 
-### 8.1 Desenvolvimento de Software
-
-Estuda a criação, manutenção e evolução de programas e sistemas.
-
-### 8.2 Inteligência Artificial
-
-Estuda como desenvolver sistemas capazes de realizar tarefas que normalmente exigiriam inteligência humana.
-
-### 8.3 Segurança da Informação
-
-Estuda técnicas para proteger sistemas, redes e informações contra acessos não autorizados e ameaças digitais.
-
-### 8.4 Banco de Dados
+## 6. Representação Interna de Dados
 
 Estuda formas de armazenar, organizar, consultar e gerenciar informações.
 
