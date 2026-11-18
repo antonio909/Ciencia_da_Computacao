@@ -389,3 +389,83 @@ Todos esses dados são armazenados internamente utilizando bits.
 Uma linguagem de programação é um conjunto de regras sintáticas e semânticas que permite escrever instruções para que um computador execute determinadas tarefas.
 
 Por meio dessas linguagens, os desenvolvedores conseguem criar programas, aplicativos, jogos, sistemas operacionais e diversos outros softwares.
+
+**Tipos de Linguagens de Programação**
+
+### 7.1 Linguagens de Baixo Nível
+
+São linguagens que possuem maior proximidade com a arquitetura do computador.
+
+Exemplos:
+
+- Linguagem de máquina.
+- Assembly.
+
+A linguagem de máquina utiliza diretamente instruções codificadas em bits.
+
+Assembly utiliza instruções simbólicas que representam operações de processador.
+
+### 7.2 Linguagens de Alto Nível
+
+São linguagens que possuem estruturas mais próximas da forma como os seres humanos escrevem e organizam instruções.
+
+Exemplos:
+
+- C.
+- C++.
+- Java.
+- Python.
+- JavaScript.
+- C#.
+
+Essas linguagens facilitam o desenvolvimento e a manutenção de programas.
+
+**Exemplo de Linguagem de Programação: C++**
+
+```cpp
+#include <iostream>
+
+int main() {
+
+ int numero1 = 10;
+ int numero2 = 20;
+
+ int resultado = numero1 + numero2;
+
+ std::cout << "Resultado: " << resultado << std::endl;
+
+ return 0;
+}
+```
+
+**Resultado**
+
+```text
+Resultado: 30
+```
+
+Nesse exemplo:
+
+- `#include <iostream>` permite utilizar recursos de entrada e saída.
+- `int main()` define a função principal.
+- `int` declara variáveis do tipo inteiro.
+- `resultado` armazena o resultado da soma.
+- `std::cout` apresenta informações na tela.
+- `return 0` indica o encerramento normal do programa.
+
+---
+
+## 8. Como todos esses conceitos se relacionam?
+
+Para compreender melhor o funcionamento de um computador, podemos observar como os conceitos estudados trabalham juntos.
+
+Imagine que você deseja executar um programa desenvolvido em C++.
+
+O processo acontece da seguinte maneira:
+
+1. O programador escreve o código-fonte utilizando uma linguagem de programação.
+2. Um compilador traduz o código para uma representação executável.
+3. O sistema operacional carrega o programa na memória RAM.
+4. O processador executa as instruções do programa.
+5. Os dados são manipulados internamente utilizando representações binárias.
+6. O resultado é apresentado ao usuário por meio de dispositivos de saída.
