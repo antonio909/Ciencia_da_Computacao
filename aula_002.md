@@ -1,718 +1,603 @@
-# Ciência da Computação — Aula 2
+# Resolução de Problemas e Desenvolvimento de Algoritmos
 
-## Fundamentos da Computação
+## 1. Introdução
 
-## 1. Introdução aos Fundamentos da Computação
+A resolução de problemas e o desenvolvimento de algoritmos são fundamentos essenciais da Ciência da Computação e da programação.
 
-Os fundamentos da computação são os conceitos básicos que explicam como os computadores representam, armazenam, processam e transmitem informações.
+Antes de escrever um programa, é necessário compreender o problema, identificar o que precisa ser resolvido, planejar uma solução e organizar os passos necessários para alcançar o resultado esperado.
 
-Para compreender como um computador funciona internamente, precisamos conhecer conceitos como:
+Um computador não resolve problemas sozinho: ele executa instruções que foram desenvolvidas por um programador.
 
-- Sistemas de numeração.
-- Sistema binário.
-- Sistema decimal.
-- Sistema octal.
-- Sistema hexadecimal.
-- Conversão entre sistemas numéricos.
-- Bits e Bytes.
-- Representação de dados.
-- Código ASCII e Unicode.
+### Objetivos desta aula
 
-Esses conceitos são fundamentais para áreas como programação, arquitetura de computadores, redes, sistemas operacionais e segurança da informação.
+Ao final desta aula, você deverá compreender:
+
+- Como analisar e interpretar problemas.
+- Como identificar entradas, processamento e saídas.
+- Como desenvolver soluções passo a passo.
+- O que são algoritmos.
+- Como representar algoritmos.
+- Como documentar soluções computacionais.
+- Como transformar um algoritmo em um programa.
 
 ---
 
-## 2. Sistemas de Numeração
+## 2. Análise e Solução de Problemas
 
-Um **sistema de numeração** é um conjunto de símbolos e regras utilizados para representar números.
+A análise de problemas consiste em compreender uma situação e identificar o que precisa ser resolvido.
 
-Existem diferentes sistemas de numeração, cada um utilizando uma determinada quantidade de símbolos.
+Na programação, essa etapa é muito importante porque escrever código sem entender o problema pode resultar em soluções incorretas ou incompletas.
 
-Os principais sistemas utilizados na computação são:
+### 2.1 Identificação do problema
 
-| Sistema | Base | Símbolos utilizados |
-|---|---:|---|
-| Decimal | 10 | 0 até 9 |
-| Binário | 2 | 0 e 1 |
-| Octal | 8 | 0 até 7 |
-| Hexadecimal | 16 | 0 até 9 e A até F |
+O primeiro passo é entender exatamente qual é o problema.
 
-O número da base representa a quantidade de símbolos disponíveis em determinado sistema.
+É necessário responder a algumas perguntas:
 
-### 2.1 Sistema Decimal
-
-O sistema decimal é o sistema de numeração utilizado no nosso cotidiano.
-
-Ele possui base 10, utilizando dez símbolos:
-
-`0, 1, 2, 3, 4, 5, 6, 7, 8, 9`
-
-Cada posição de um número representa uma potência de 10.
+- Qual é o problema?
+- O que precisa ser calculado ou executado?
+- Quais informações são necessárias?
+- Qual resultado deve ser apresentado?
+- Existem restrições ou condições?
 
 **Exemplo:**
 
-Número: `352`
+Imagine que precisamos desenvolver um programa que calcule a média de um aluno.
 
-Podemos decompor esse número da seguinte maneira:
+Primeiro, devemos compreender o problema:
+
+- Precisamos receber duas notas.
+- Precisamos somar as notas.
+- Precisamos dividir o resultado por dois.
+- Precisamos apresentar a média calculada.
+
+### 2.2 Identificação das entradas, processamento e saídas
+
+Um problema computacional geralmente pode ser dividido em três elementos fundamentais:
+
+| Elemento | Descrição |
+|---|---|
+| Entrada (Input) | Dados fornecidos ao programa. |
+| Processamento (Processing) | Operações realizadas com os dados. |
+| Saída (Output) | Resultado produzido pelo programa. |
+
+Esse modelo é conhecido como IPO (Input, Processing, Output).
+
+**Exemplo: cálculo da média de duas notas.**
+
+- **Entrada:** notas 8 e 6.
+- **Processamento:** (8 + 6) / 2.
+- **Saída:** 7.
+
+### 2.3 Decomposição de problemas
+
+A decomposição consiste em dividir um problema complexo em partes menores e mais simples.
+
+**Exemplo: sistema de cadastro de alunos.**
+
+Podemos dividir o sistema nas seguintes partes:
+
+1. Cadastro de alunos.
+2. Consulta de alunos.
+3. Atualização de informações.
+4. Exclusão de registros.
+5. Emissão de relatórios.
+
+### 2.4 Planejamento da solução
+
+Depois de compreender o problema, precisamos planejar como resolvê-lo.
+
+O planejamento envolve:
+
+- Identificar os dados necessários.
+- Definir as operações que serão realizadas.
+- Estabelecer a sequência das instruções.
+- Identificar possíveis condições.
+- Verificar se a solução atende ao problema.
+
+---
+
+## 3. Algoritmos
+
+Um algoritmo é uma sequência finita e organizada de instruções utilizadas para resolver um problema ou executar uma tarefa.
+
+Os algoritmos estão presentes em diversas atividades do cotidiano.
+
+**Exemplo: preparar um café.**
+
+1. Pegar uma xícara.
+2. Colocar água para aquecer.
+3. Preparar o café.
+4. Colocar o café na xícara.
+5. Adicionar açúcar, se desejar.
+6. Finalizar.
+
+### 3.1 Características de um algoritmo
+
+| Característica | Significado |
+|---|---|
+| Finitude | Deve possuir uma quantidade limitada de passos. |
+| Clareza | As instruções devem ser compreensíveis. |
+| Precisão | Cada instrução deve possuir um significado definido. |
+| Efetividade | As operações devem poder ser executadas. |
+| Entrada | Pode receber dados para realizar o processamento. |
+| Saída | Deve produzir um resultado ou executar uma ação. |
+
+### 3.2 Exemplo de algoritmo
+
+Problema: calcular a soma de dois números.
+
+**Algoritmo em linguagem natural:**
+
+1. Iniciar.
+2. Solicitar o primeiro número.
+3. Solicitar o segundo número.
+4. Somar os dois números.
+5. Apresentar o resultado.
+6. Finalizar.
+
+**Representação em pseudocódigo:**
 
 ```text
-352 = 3 × 100 + 5 × 10 + 2 × 1
+Algoritmo "Soma"
 
-352 = 300 + 50 + 2
+    Declare numero1, numero2, resultado: inteiro
+
+    Escreva("Digite o primeiro número:")
+    Leia(numero1)
+
+    Escreva("Digite o segundo número:")
+    Leia(numero2)
+
+    resultado <- numero1 + numero2
+
+    Escreva("Resultado:", resultado)
+
+FimAlgoritmo
 ```
 
-Utilizando potências:
+**Implementação em C++:**
+
+```cpp
+#include <iostream>
+
+using namespace std;
+
+int main() {
+    int numero1, numero2, resultado;
+
+    cout << "Digite o primeiro numero: ";
+    cin >> numero1;
+
+    cout << "Digite o segundo numero: ";
+    cin >> numero2;
+
+    resultado = numero1 + numero2;
+
+    cout << "Resultado: " << resultado << endl;
+
+    return 0;
+}
+```
+
+O algoritmo representa a lógica da solução, enquanto o código C++ implementa essa lógica utilizando uma linguagem de programação.
+
+---
+
+## 4. Representação de Algoritmos
+
+A representação de algoritmos consiste em apresentar uma solução de maneira organizada para facilitar sua compreensão e implementação.
+
+### 4.1 Linguagem natural
+
+Consiste em descrever as instruções utilizando a linguagem humana.
+
+**Exemplo: verificar se uma pessoa é maior de idade.**
 
 ```text
-352 = 3 × 10² + 5 × 10¹ + 2 × 10⁰
+1. Iniciar.
+2. Solicitar a idade da pessoa.
+3. Verificar se a idade é maior ou igual a 18.
+4. Se for, informar que é maior de idade.
+5. Caso contrário, informar que é menor de idade.
+6. Finalizar.
 ```
 
-### 2.2 Sistema Binário
+**Vantagem:** é simples e fácil de compreender.
 
-O sistema binário é um sistema de numeração de base 2.
+**Desvantagem:** pode apresentar ambiguidades, principalmente em problemas complexos.
 
-Ele utiliza apenas dois símbolos:
+### 4.2 Pseudocódigo
 
-- `0`
-- `1`
-
-Os computadores utilizam o sistema binário para representar e processar informações por meio de estados físicos de circuitos eletrônicos.
-
-Cada posição de um número binário representa uma potência de 2.
+O pseudocódigo é uma forma estruturada de representar algoritmos utilizando instruções semelhantes às linguagens de programação.
 
 **Exemplo:**
 
-Número binário: `1011`
-
-Decomposição:
-
 ```text
-1011 = 1 × 2³ + 0 × 2² + 1 × 2¹ + 1 × 2⁰
+Algoritmo "Maioridade"
+
+    Declare idade: inteiro
+
+    Escreva("Digite sua idade:")
+    Leia(idade)
+
+    Se idade >= 18 Então
+        Escreva("Maior de idade")
+    Senão
+        Escreva("Menor de idade")
+    FimSe
+
+FimAlgoritmo
 ```
 
-Calculando:
+**Vantagens:**
+
+- Facilita o planejamento.
+- Organiza a lógica.
+- Não depende de uma linguagem específica.
+- Facilita a conversão para código.
+
+### 4.3 Fluxograma
+
+Um fluxograma é uma representação gráfica de um algoritmo.
+
+Ele utiliza símbolos geométricos para representar diferentes operações e decisões.
+
+| Símbolo | Significado |
+|---|---|
+| Oval | Início ou fim. |
+| Retângulo | Processamento. |
+| Paralelogramo | Entrada ou saída de dados. |
+| Losango | Decisão ou condição. |
+| Seta | Direção do fluxo de execução. |
+
+**Exemplo de fluxo lógico:**
 
 ```text
-1011 = 8 + 0 + 2 + 1
-
-1011 = 11
+          (Início)
+              |
+              v
+       [Receber idade]
+              |
+              v
+        <Idade >= 18?>
+           /       \
+         SIM       NÃO
+          |         |
+          v         v
+   [Maior de   [Menor de
+     idade]      idade]
+          \         /
+           \       /
+              v
+             (Fim)
 ```
 
-Portanto:
+---
+
+## 5. Documentação de Algoritmos
+
+A documentação consiste em registrar informações sobre o funcionamento, a estrutura e a finalidade de um algoritmo ou programa.
+
+### 5.1 Comentários no código
+
+Comentários são textos adicionados ao código para explicar determinadas instruções.
+
+**Comentário de uma linha:**
+
+```cpp
+// Calcula a soma de dois números
+resultado = numero1 + numero2;
+```
+
+**Comentário de múltiplas linhas:**
+
+```cpp
+/*
+    Programa responsável por calcular
+    a soma de dois números inteiros.
+*/
+
+int resultado = numero1 + numero2;
+```
+
+Os comentários não são executados pelo programa.
+
+### 5.2 Documentação da lógica
+
+Além dos comentários, é importante documentar:
+
+- Objetivo do algoritmo.
+- Dados de entrada.
+- Dados de saída.
+- Variáveis utilizadas.
+- Operações realizadas.
+- Condições e regras.
+- Possíveis limitações.
+
+**Exemplo de documentação:**
 
 ```text
-1011₂ = 11₁₀
+Nome: Calculadora de Soma
+
+Objetivo:
+Calcular a soma de dois números inteiros.
+
+Entradas:
+- Primeiro número.
+- Segundo número.
+
+Processamento:
+Somar os dois números recebidos.
+
+Saída:
+Apresentar o resultado da soma.
+
+Variáveis:
+- numero1
+- numero2
+- resultado
 ```
 
-### 2.3 Sistema Octal
+### 5.3 Importância da documentação
 
-O sistema octal possui base 8 e utiliza os seguintes símbolos:
+1. Facilita a compreensão do código.
+2. Ajuda na identificação de erros.
+3. Facilita a manutenção do software.
+4. Permite que outros desenvolvedores entendam o projeto.
+5. Registra decisões tomadas durante o desenvolvimento.
 
-`0, 1, 2, 3, 4, 5, 6, 7`
+---
 
-Cada posição representa uma potência de 8.
+## 6. Testes e Validação de Algoritmos
+
+Depois de desenvolver um algoritmo, precisamos verificar se ele realmente resolve o problema.
+
+Essa etapa é chamada de validação.
+
+### 6.1 Teste de mesa
+
+O teste de mesa consiste em executar manualmente as instruções de um algoritmo, acompanhando os valores das variáveis.
 
 **Exemplo:**
 
-Número: `157`
-
 ```text
-157 = 1 × 8² + 5 × 8¹ + 7 × 8⁰
+numero1 <- 10
+numero2 <- 5
 
-157 = 64 + 40 + 7
+resultado <- numero1 + numero2
 
-157 = 111
+Escreva(resultado)
 ```
 
-Portanto:
+Tabela de execução:
+
+| Etapa | numero1 | numero2 | resultado |
+|---|---:|---:|---:|
+| Inicialização | 10 | 5 | - |
+| Soma | 10 | 5 | 15 |
+| Saída | 10 | 5 | 15 |
+
+Resultado esperado:
 
 ```text
-157₈ = 111₁₀
+15
 ```
 
-O sistema octal é utilizado em algumas áreas da computação, especialmente em permissões de arquivos em sistemas Unix e Linux.
+### 6.2 Casos de teste
 
-### 2.4 Sistema Hexadecimal
+Um bom algoritmo deve ser testado com diferentes valores.
 
-O sistema hexadecimal possui base 16.
+Exemplo: verificar se um número é positivo ou negativo.
 
-Ele utiliza dez números e seis letras:
-
-| Decimal | Hexadecimal |
+| Entrada | Resultado esperado |
 |---:|---|
-| 0 | 0 |
-| 1 | 1 |
-| 2 | 2 |
-| 3 | 3 |
-| 4 | 4 |
-| 5 | 5 |
-| 6 | 6 |
-| 7 | 7 |
-| 8 | 8 |
-| 9 | 9 |
-| 10 | A |
-| 11 | B |
-| 12 | C |
-| 13 | D |
-| 14 | E |
-| 15 | F |
-
-Cada posição representa uma potência de 16.
-
-**Exemplo:**
-
-Número hexadecimal: `2A`
-
-```text
-2A = 2 × 16¹ + 10 × 16⁰
-
-2A = 32 + 10
-
-2A = 42
-```
-
-Portanto:
-
-```text
-2A₁₆ = 42₁₀
-```
-
-O sistema hexadecimal é muito utilizado na computação porque permite representar números binários de maneira mais compacta.
-
-**Exemplos de aplicações:**
-
-- Endereços de memória.
-- Códigos de cores HTML e CSS.
-- Depuração de programas.
-- Representação de dados binários.
+| 10 | Positivo |
+| -5 | Negativo |
+| 0 | Zero |
 
 ---
 
-## 3. Conversão entre Sistemas Numéricos
+## 7. Etapas do Desenvolvimento de Algoritmos
 
-A conversão entre sistemas numéricos consiste em transformar um número de uma base para outra.
+O desenvolvimento de algoritmos pode ser organizado em um processo com etapas bem definidas.
 
-Essa habilidade é importante para compreender como os computadores representam valores internamente.
+1. **Análise do problema:** compreender o problema e identificar o objetivo.
+2. **Identificação dos dados:** definir as entradas, os processamentos e as saídas.
+3. **Planejamento da solução:** organizar os passos necessários para resolver o problema.
+4. **Representação do algoritmo:** utilizar linguagem natural, pseudocódigo ou fluxograma.
+5. **Implementação:** transformar o algoritmo em código utilizando uma linguagem de programação.
+6. **Testes e validação:** verificar se o programa produz os resultados esperados.
+7. **Documentação e manutenção:** registrar o funcionamento e realizar melhorias quando necessário.
 
-### 3.1 Conversão de Binário para Decimal
+---
 
-Para converter um número binário em decimal, devemos multiplicar cada dígito pela potência de 2 correspondente à sua posição.
+## 8. Exemplo Prático Completo
 
-**Exemplo:**
+Vamos desenvolver um algoritmo para calcular a área de um retângulo.
 
-Converter `1101₂` para decimal.
+### Etapa 1: Análise do problema
+
+Precisamos calcular a área de um retângulo utilizando sua largura e altura.
+
+### Etapa 2: Identificação das entradas e saídas
+
+- Entrada: largura e altura.
+- Processamento: multiplicação da largura pela altura.
+- Saída: área do retângulo.
+
+### Etapa 3: Fórmula matemática
+
+```math
+Área = largura \times altura
+```
+
+### Etapa 4: Pseudocódigo
 
 ```text
-1101₂
+Algoritmo "AreaRetangulo"
 
-= 1 × 2³
-+ 1 × 2²
-+ 0 × 2¹
-+ 1 × 2⁰
+    Declare largura, altura, area: real
 
-= 8 + 4 + 0 + 1
+    Escreva("Digite a largura:")
+    Leia(largura)
 
-= 13
+    Escreva("Digite a altura:")
+    Leia(altura)
+
+    area <- largura * altura
+
+    Escreva("Área do retângulo:", area)
+
+FimAlgoritmo
+```
+
+### Etapa 5: Implementação em C++
+
+```cpp
+#include <iostream>
+
+using namespace std;
+
+int main() {
+    double largura, altura, area;
+
+    cout << "Digite a largura: ";
+    cin >> largura;
+
+    cout << "Digite a altura: ";
+    cin >> altura;
+
+    area = largura * altura;
+
+    cout << "Area do retangulo: " << area << endl;
+
+    return 0;
+}
+```
+
+### Etapa 6: Teste
+
+Considerando:
+
+- Largura = 5
+- Altura = 4
+
+Aplicando a fórmula:
+
+```text
+Área = 5 * 4 = 20
 ```
 
 Resultado:
 
 ```text
-1101₂ = 13₁₀
-```
-
-### 3.2 Conversão de Decimal para Binário
-
-Para converter um número decimal em binário, utilizamos divisões sucessivas por 2.
-
-Devemos dividir o número por 2 e guardar os restos até que o quociente seja zero.
-
-Depois, lemos os restos de baixo para cima.
-
-**Exemplo:**
-
-Converter `13₁₀` para binário.
-
-```text
-13 ÷ 2 = 6, resto 1
- 6 ÷ 2 = 3, resto 0
- 3 ÷ 2 = 1, resto 1
- 1 ÷ 2 = 0, resto 1
-```
-
-Lendo os restos de baixo para cima:
-
-```text
-1101
-```
-
-Resultado:
-
-```text
-13₁₀ = 1101₂
-```
-
-### 3.3 Conversão de Hexadecimal para Decimal
-
-Para converter hexadecimal em decimal, multiplicamos cada dígito pela potência de 16 correspondente.
-
-**Exemplo:**
-
-Converter `3F₁₆` para decimal.
-
-Sabemos que:
-
-```text
-F = 15
-```
-
-Então:
-
-```text
-3F = 3 × 16¹ + 15 × 16⁰
-
-3F = 48 + 15
-
-3F = 63
-```
-
-Resultado:
-
-```text
-3F₁₆ = 63₁₀
-```
-
-### 3.4 Conversão de Decimal para Hexadecimal
-
-Para converter decimal em hexadecimal, realizamos divisões sucessivas por 16.
-
-**Exemplo:**
-
-Converter `42₁₀` para hexadecimal.
-
-```text
-42 ÷ 16 = 2, resto 10
- 2 ÷ 16 = 0, resto 2
-```
-
-O resto 10 corresponde à letra A.
-
-Lendo os restos de baixo para cima:
-
-```text
-2A
-```
-
-Resultado:
-
-```text
-42₁₀ = 2A₁₆
-```
-
-### 3.5 Conversão de Binário para Hexadecimal
-
-Para converter binário em hexadecimal, agrupamos os bits de quatro em quatro, começando pela direita.
-
-Cada grupo de quatro bits corresponde a um dígito hexadecimal.
-
-**Exemplo:**
-
-Converter `10101111₂` para hexadecimal.
-
-```text
-1010 1111
-```
-
-Consultando a correspondência:
-
-```text
-1010 = A
-1111 = F
-```
-
-Resultado:
-
-```text
-10101111₂ = AF₁₆
-```
-
-### 3.6 Conversão de Hexadecimal para Binário
-
-Cada dígito hexadecimal pode ser representado por quatro bits.
-
-**Exemplo:**
-
-Converter `2F₁₆` para binário.
-
-```text
-2 = 0010
-F = 1111
-```
-
-Resultado:
-
-```text
-2F₁₆ = 00101111₂
+Area do retangulo: 20
 ```
 
 ---
 
-## 4. Bits e Bytes
+## 9. Boas Práticas no Desenvolvimento de Algoritmos
 
-Os computadores trabalham com informações representadas em formato binário.
+- Entenda o problema antes de começar a programar.
+- Divida problemas complexos em partes menores.
+- Utilize nomes claros para as variáveis.
+- Organize as instruções em uma sequência lógica.
+- Evite operações desnecessárias.
+- Utilize comentários quando forem úteis.
+- Teste diferentes situações.
+- Verifique se os resultados estão corretos.
+- Mantenha a documentação atualizada.
 
-Para compreender como essas informações são armazenadas, precisamos conhecer os conceitos de bit e byte.
+---
 
-### 4.1 O que é um Bit?
+## 10. Resumo da Aula
 
-Um **bit** (Binary Digit) é a menor unidade básica de informação utilizada na computação.
-
-Um bit pode assumir apenas dois valores:
-
-- `0`
-- `1`
-
-Esses valores representam estados binários utilizados pelos circuitos digitais.
-
-### 4.2 O que é um Byte?
-
-Um **byte** é um conjunto de 8 bits.
-
-Exemplo:
-
-```text
-01000001
-```
-
-Esse conjunto possui oito bits e corresponde a um byte.
-
-### 4.3 Unidades de Informação
-
-As informações digitais podem ser medidas utilizando diferentes unidades.
-
-| Unidade | Equivalência |
+| Conceito | Definição |
 |---|---|
-| Bit (b) | Um dígito binário |
-| Byte (B) | 8 bits |
-| Kilobyte (KB) | 1.000 bytes |
-| Megabyte (MB) | 1.000 KB |
-| Gigabyte (GB) | 1.000 MB |
-| Terabyte (TB) | 1.000 GB |
-| Petabyte (PB) | 1.000 TB |
-
-**Observação:** na convenção decimal utilizada para armazenamento, 1 KB corresponde a 1.000 bytes. Na convenção binária, 1 KiB corresponde a 1.024 bytes.
-
-### 4.4 Diferença entre Bit e Byte
-
-É importante não confundir essas duas unidades.
-
-- **Bit (b):** representa um único dígito binário.
-- **Byte (B):** representa um conjunto de oito bits.
-
-Exemplos:
-
-```text
-1 bit = 0 ou 1
-
-1 byte = 01000001
-```
-
-A diferença entre letras maiúsculas e minúsculas também é importante:
-
-- `b` representa bit.
-- `B` representa byte.
+| Análise de problemas | Processo de compreender e identificar o que precisa ser resolvido. |
+| Decomposição | Divisão de problemas complexos em partes menores. |
+| Algoritmo | Sequência finita e organizada de instruções. |
+| Entrada | Dados fornecidos ao programa. |
+| Processamento | Operações realizadas com os dados. |
+| Saída | Resultado produzido pelo programa. |
+| Pseudocódigo | Representação textual da lógica de um algoritmo. |
+| Fluxograma | Representação gráfica de um algoritmo. |
+| Documentação | Registro das informações sobre o funcionamento da solução. |
+| Teste de mesa | Simulação manual da execução de um algoritmo. |
 
 ---
 
-## 5. Representação de Dados nos Computadores
+## 11. Conclusão
 
-Os computadores precisam representar diferentes tipos de informações utilizando o sistema binário.
+A resolução de problemas e o desenvolvimento de algoritmos são habilidades fundamentais para qualquer profissional da área de programação.
 
-Entre essas informações estão:
+Antes de aprender a utilizar linguagens como C++, Python ou Java, é importante desenvolver o raciocínio lógico e compreender como transformar problemas em soluções organizadas.
 
-- Números.
-- Textos.
-- Imagens.
-- Áudios.
-- Vídeos.
+Um bom programador não começa simplesmente escrevendo código. Ele primeiro entende o problema, planeja a solução, desenvolve o algoritmo, implementa e testa o resultado.
 
-Tudo isso é armazenado e processado utilizando sequências de bits.
-
-### 5.1 Representação de Números
-
-Os computadores utilizam representações binárias para armazenar números inteiros e números com casas decimais.
-
-Exemplo:
-
-```text
-Decimal: 10
-Binário: 1010
-```
-
-### 5.2 Representação de Textos
-
-Os textos são representados por códigos numéricos associados a caracteres.
-
-Por exemplo, a letra `A` possui o código decimal 65 na tabela ASCII.
-
-Sua representação binária em um byte é:
-
-```text
-01000001
-```
-
-### 5.3 Representação de Imagens
-
-As imagens digitais são formadas por pequenos elementos chamados pixels.
-
-Cada pixel possui informações que determinam sua cor.
-
-Em imagens RGB, as cores são representadas pela combinação de três componentes:
-
-- Vermelho (Red).
-- Verde (Green).
-- Azul (Blue).
-
-Cada componente normalmente utiliza 8 bits.
-
-Exemplo:
-
-```text
-RGB(255, 0, 0)
-```
-
-Representa a cor vermelha.
-
-### 5.4 Representação de Áudios
-
-Os computadores representam áudios por meio de dados digitais.
-
-Um áudio digital é produzido a partir de amostras de um sinal sonoro.
-
-Dois conceitos importantes são:
-
-- **Taxa de amostragem:** quantidade de amostras capturadas por segundo.
-- **Profundidade de bits:** quantidade de bits utilizada para representar cada amostra.
-
-### 5.5 Representação de Vídeos
-
-Um vídeo digital é formado por uma sequência de imagens exibidas em determinada velocidade.
-
-Além das imagens, os arquivos de vídeo podem armazenar informações de áudio, legendas e outros dados.
-
-A quantidade de quadros por segundo é chamada de FPS (Frames Per Second).
+**A programação começa com a capacidade de pensar logicamente e organizar soluções.**
 
 ---
 
-## 6. Código ASCII
+## 12. Exercícios para Fixação
 
-ASCII significa **American Standard Code for Information Interchange**.
+### Questão 1
 
-É um padrão de codificação utilizado para representar caracteres por meio de valores numéricos.
+O que é um algoritmo?
 
-O ASCII tradicional utiliza 7 bits, permitindo representar 128 códigos diferentes.
+a) Uma linguagem de programação.
 
-Esses códigos incluem:
+b) Uma sequência organizada de instruções para resolver um problema.
 
-- Letras maiúsculas.
-- Letras minúsculas.
-- Números.
-- Símbolos.
-- Caracteres de controle.
+c) Um componente físico do computador.
 
-### 6.1 Exemplos de códigos ASCII
+d) Um banco de dados.
 
-| Caractere | Decimal | Binário |
-|---|---:|---|
-| A | 65 | 01000001 |
-| B | 66 | 01000010 |
-| C | 67 | 01000011 |
-| a | 97 | 01100001 |
-| b | 98 | 01100010 |
-| 0 | 48 | 00110000 |
-| 1 | 49 | 00110001 |
-| Espaço | 32 | 00100000 |
+### Questão 2
 
-### 6.2 Exemplo prático
+Quais são os três elementos do modelo IPO?
 
-A palavra `ABC` pode ser representada utilizando códigos ASCII:
+a) Código, compilação e execução.
 
-```text
-A = 65
-B = 66
-C = 67
-```
+b) Entrada, processamento e saída.
 
-Em binário:
+c) Hardware, software e usuário.
 
-```text
-A = 01000001
-B = 01000010
-C = 01000011
-```
+d) Variáveis, funções e classes.
 
-Portanto:
+### Questão 3
 
-```text
-ABC = 01000001 01000010 01000011
-```
+Qual é a finalidade de um fluxograma?
 
----
+a) Representar graficamente um algoritmo.
 
-## 7. Unicode
+b) Armazenar informações.
 
-O **Unicode** é um padrão desenvolvido para permitir a representação de caracteres utilizados em diferentes idiomas e sistemas de escrita.
+c) Compilar programas.
 
-Enquanto o ASCII tradicional representa 128 códigos, o Unicode possui um repertório muito maior de caracteres.
+d) Criar bancos de dados.
 
-Ele permite representar:
+### Questão 4
 
-- Letras do alfabeto latino.
-- Caracteres acentuados.
-- Caracteres chineses.
-- Caracteres japoneses.
-- Caracteres árabes.
-- Símbolos matemáticos.
-- Emojis.
+O que é decomposição de problemas?
 
-### 7.1 UTF-8
+a) Excluir partes de um programa.
 
-UTF-8 é uma das formas de codificação utilizadas para representar caracteres Unicode.
+b) Transformar código em linguagem natural.
 
-Ele utiliza de 1 a 4 bytes por caractere.
+c) Dividir um problema complexo em partes menores.
 
-Uma de suas principais vantagens é a compatibilidade com o ASCII tradicional.
+d) Executar um programa várias vezes.
 
-### 7.2 Exemplo
+### Questão 5
 
-A letra `A` possui o mesmo valor em ASCII e UTF-8:
+Para que serve o teste de mesa?
 
-```text
-A = 65
-```
+a) Instalar uma linguagem de programação.
 
-Em hexadecimal:
+b) Simular manualmente a execução de um algoritmo.
 
-```text
-41
-```
+c) Criar interfaces gráficas.
 
-Já caracteres acentuados, como `á`, precisam de mais de um byte em UTF-8.
-
-**Exemplo:**
-
-```text
-á = C3 A1
-```
-
-### 7.3 Diferença entre ASCII e Unicode
-
-| ASCII | Unicode |
-|---|---|
-| Padrão de codificação tradicional | Padrão universal de caracteres |
-| ASCII tradicional possui 128 códigos | Possui um repertório muito maior |
-| Limitado principalmente a caracteres básicos | Suporta diversos idiomas e símbolos |
-| Utiliza 7 bits | Utiliza diferentes formas de codificação |
-
----
-
-## 8. Importância dos Fundamentos da Computação
-
-Compreender os fundamentos da computação é essencial para qualquer pessoa que deseja trabalhar com tecnologia.
-
-Esses conhecimentos ajudam a entender:
-
-- Como os computadores armazenam informações.
-- Como os processadores trabalham com dados.
-- Como os programas representam números e caracteres.
-- Como funcionam os sistemas digitais.
-- Como os dados são transmitidos pelas redes.
-- Como os arquivos são armazenados.
-
-Esses conceitos também são importantes para estudar arquitetura de computadores, programação de baixo nível, sistemas operacionais e engenharia de software.
-
----
-
-## 9. Resumo da Aula
-
-Nesta aula, estudamos os principais fundamentos da computação:
-
-1. Conceito de sistemas de numeração.
-2. Sistema decimal.
-3. Sistema binário.
-4. Sistema octal.
-5. Sistema hexadecimal.
-6. Conversão entre sistemas numéricos.
-7. Conceitos de bits e bytes.
-8. Unidades de armazenamento.
-9. Representação de dados nos computadores.
-10. Código ASCII.
-11. Unicode e UTF-8.
-
----
-
-## 10. Exercícios de Fixação
-
-### Questões Teóricas
-
-**1.** O que é um sistema de numeração?
-
-**2.** Qual é a base do sistema binário?
-
-**3.** Quais símbolos são utilizados no sistema hexadecimal?
-
-**4.** Qual é a diferença entre bit e byte?
-
-**5.** Quantos bits existem em um byte?
-
-**6.** O que significa ASCII?
-
-**7.** Qual é a principal finalidade do Unicode?
-
-**8.** O que é UTF-8?
-
-**9.** Como os computadores representam imagens digitalmente?
-
-**10.** Por que o sistema binário é utilizado nos computadores?
-
-### Exercícios de Conversão
-
-**11.** Converta o número binário `1010` para decimal.
-
-**12.** Converta o número decimal `25` para binário.
-
-**13.** Converta o número hexadecimal `2F` para decimal.
-
-**14.** Converta o número decimal `64` para hexadecimal.
-
-**15.** Converta o número binário `11110000` para hexadecimal.
-
-**16.** Converta o número hexadecimal `A5` para binário.
-
-**17.** Converta o número octal `25` para decimal.
-
-**18.** Converta o número decimal `100` para binário.
-
----
-
-## 11. Próxima Aula
-
-### Aula 3 — Lógica de Programação e Algoritmos
-
-Conteúdos que serão estudados:
-
-- Introdução à lógica de programação.
-- O que é raciocínio lógico?
-- O que é pensamento computacional?
-- Algoritmos e suas características.
-- Pseudocódigo.
-- Fluxogramas.
-- Variáveis e constantes.
-- Tipos de dados.
-- Operadores.
-- Entrada e saída de dados.
-- Resolução de problemas utilizando algoritmos.
-
----
-
-*Fim da Aula 2 — Fundamentos da Computação.*
+d) Armazenar dados na memória.
