@@ -235,3 +235,239 @@ int main() {
 ---
 
 ## 3. Estruturas de Repetição
+
+As estruturas de repetição, também chamadas de laços ou loops, permitem executar um conjunto de instruções várias vezes.
+
+Elas evitam que precisemos escrever repetidamente o mesmo código.
+
+Em C++, existem três estruturas principais de repetição:
+
+- for
+- while
+- do while
+
+### 3.1 Estrutura for
+
+A estrutura `for` é utilizada principalmente quando sabemos quantas vezes desejamos repetir uma operação.
+
+**Sintaxe**
+
+```cpp
+for (inicializacao; condicao; incremento) {
+    // Código que será repetido
+}
+```
+
+A estrutura possui três partes:
+
+1. **Inicialização:** define o valor inicial da variável de controle.
+2. **Condição:** determina se a repetição deve continuar.
+3. **Incremento:** atualiza a variável de controle.
+
+**Exemplo**
+
+```cpp
+#include <iostream>
+using namespace std;
+
+int main() {
+
+    for (int i = 1; i <= 5; i++) {
+        cout << "Numero: " << i << endl;
+    }
+
+    return 0;
+}
+```
+
+**Resultado:**
+
+```text
+Numero: 1
+Numero: 2
+Numero: 3
+Numero: 4
+Numero: 5
+```
+
+**Explicação:**
+
+- `int i = 1`: começa a contagem em 1.
+- `i <= 5`: continua enquanto `i` for menor ou igual a 5.
+- `i++`: aumenta o valor de `i` em uma unidade.
+
+### 3.2 Estrutura while
+
+A estrutura `while` executa um bloco de código enquanto determinada condição for verdadeira.
+
+Diferentemente do `for`, normalmente é utilizada quando não sabemos antecipadamente quantas repetições serão necessárias.
+
+**Sintaxe**
+
+```cpp
+while (condicao) {
+    // Código que será repetido
+}
+```
+
+**Exemplo**
+
+```cpp
+#include <iostream>
+using namespace std;
+
+int main() {
+
+    int contador = 1;
+
+    while (contador <= 5) {
+        cout << "Contador: " << contador << endl;
+
+        contador++;
+    }
+
+    return 0;
+}
+```
+
+**Resultado:**
+
+```text
+Contador: 1
+Contador: 2
+Contador: 3
+Contador: 4
+Contador: 5
+```
+
+**Explicação:**
+
+1. Inicializamos o contador com o valor 1.
+2. O `while` verifica se o contador é menor ou igual a 5.
+3. Se a condição for verdadeira, executa o bloco.
+4. O contador é incrementado.
+5. O processo continua até a condição se tornar falsa.
+
+**Atenção:** se a variável de controle não for atualizada corretamente, podemos criar um loop infinito.
+
+### 3.3 Estrutura do while
+
+A estrutura `do while` é semelhante ao `while`, mas possui uma diferença importante:
+
+**O bloco de código é executado pelo menos uma vez, independentemente da condição.**
+
+Isso acontece porque a condição é verificada somente depois da execução do bloco.
+
+**Sintaxe**
+
+```cpp
+do {
+    // Código executado
+} while (condicao);
+```
+
+**Exemplo:**
+
+```cpp
+#include <iostream>
+using namespace std;
+
+int main() {
+
+    int numero = 1;
+
+    do {
+        cout << "Numero: " << numero << endl;
+
+        numero++;
+
+    } while (numero <= 5);
+
+    return 0;
+}
+```
+
+**Resultado:**
+
+```text
+Numero: 1
+Numero: 2
+Numero: 3
+Numero: 4
+Numero: 5
+```
+
+**Diferença entre while e do while**
+
+Observe o exemplo:
+
+```cpp
+int numero = 10;
+
+while (numero < 5) {
+    cout << "Executando while" << endl;
+}
+```
+
+Nesse caso, nenhuma mensagem será exibida, pois a condição já começa falsa.
+
+Agora:
+
+```cpp
+int numero = 10;
+
+do {
+    cout << "Executando do while" << endl;
+} while (numero < 5);
+```
+
+Nesse caso, a mensagem será exibida uma vez, mesmo com a condição falsa.
+
+---
+
+## 4. Controle de Repetição
+
+Além das estruturas de repetição, C++ possui instruções que permitem controlar o comportamento dos loops.
+
+As principais são:
+
+- `break`
+- `continue`
+
+### 4.1 Instrução break
+
+A instrução `break` interrompe imediatamente a execução de um loop.
+
+**Exemplo**
+
+```cpp
+#include <iostream>
+using namespace std;
+
+int main() {
+
+    for (int i = 1; i <= 10; i++) {
+
+        if (i == 5) {
+            break;
+        }
+
+        cout << i << endl;
+    }
+
+    return 0;
+}
+```
+
+**Resultado:**
+
+```text
+1
+2
+3
+4
+```
+
+Quando `i` chega a `5`, o `break` encerra o loop.
+
+### 4.2
