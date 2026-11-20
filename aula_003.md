@@ -470,4 +470,238 @@ int main() {
 
 Quando `i` chega a `5`, o `break` encerra o loop.
 
-### 4.2
+### 4.2 Instrução continue
+
+A instrução `continue` interrompe apenas a iteração atual e passa para a próxima repetição.
+
+**Exemplo**
+
+```cpp
+#include <iostream>
+using namespace std;
+
+int main() {
+
+    for (int i = 1; i <= 5; i++) {
+
+        if (i == 3) {
+            continue;
+        }
+
+        cout << i << endl;
+    }
+
+    return 0;
+}
+```
+
+**Resultado:**
+
+```text
+1
+2
+4
+5
+```
+
+Quando `i` é igual a 3, o programa pula aquela iteração.
+
+---
+
+## 5. Estruturas Aninhadas
+
+Estruturas de decisão e repetição podem ser colocadas dentro umas das outras.
+
+Esse conceito é chamado de **aninhamento** (*nesting*).
+
+### 5.1 if dentro de outro if
+
+```cpp
+#include <iostream>
+using namespace std;
+
+int main() {
+
+    int idade = 20;
+    bool possuiIngresso = true;
+
+    if (idade >= 18) {
+
+        if (possuiIngresso) {
+            cout << "Entrada permitida!" << endl;
+        } else {
+            cout << "Você precisa de um ingresso." << endl;
+        }
+
+    } else {
+        cout << "Entrada não permitida." << endl;
+    }
+
+    return 0;
+}
+```
+
+### 5.2 Loop dentro de outro loop
+
+Também podemos utilizar um loop dentro de outro loop. Isso é conhecido como *nested loops*.
+
+**Exemplo**
+
+```cpp
+#include <iostream>
+using namespace std;
+
+int main() {
+
+    for (int i = 1; i <= 3; i++) {
+
+        for (int j = 1; j <= 3; j++) {
+
+            cout << i << " - " << j << endl;
+
+        }
+    }
+
+    return 0;
+}
+```
+
+**Resultado:**
+
+```text
+1 - 1
+1 - 2
+1 - 3
+2 - 1
+2 - 2
+2 - 3
+3 - 1
+3 - 2
+3 - 3
+```
+
+O loop interno executa completamente para cada repetição do loop externo.
+
+---
+
+## 6. Comparação entre as Estruturas de Repetição
+
+| Estrutura | Característica |
+|---|---|
+| `for` | Ideal quando sabemos quantas repetições queremos. |
+| `while` | Verifica a condição antes de executar. |
+| `do while` | Executa pelo menos uma vez antes de verificar a condição. |
+
+**Quando utilizar cada uma?**
+
+- Utilize `for` quando precisar percorrer uma sequência de números ou elementos.
+- Utilize `while` quando a repetição depender de uma condição.
+- Utilize `do while` quando precisar executar o código pelo menos uma vez, como em um menu interativo.
+
+---
+
+## 7. Exemplo Prático: Sistema de Menu
+
+Vamos combinar estruturas de decisão e repetição para criar um pequeno sistema de menu.
+
+```cpp
+#include <iostream>
+using namespace std;
+
+int main() {
+
+    int opcao;
+
+    do {
+
+        cout << "\n===== MENU PRINCIPAL =====" << endl;
+        cout << "1 - Cadastrar" << endl;
+        cout << "2 - Consultar" << endl;
+        cout << "3 - Configuracoes" << endl;
+        cout << "0 - Sair" << endl;
+
+        cout << "Escolha uma opcao: ";
+        cin >> opcao;
+
+        switch (opcao) {
+
+            case 1:
+                cout << "Cadastro selecionado." << endl;
+                break;
+
+            case 2:
+                cout << "Consulta selecionada." << endl;
+                break;
+
+            case 3:
+                cout << "Configuracoes selecionadas." << endl;
+                break;
+
+            case 0:
+                cout << "Encerrando o programa..." << endl;
+                break;
+
+            default:
+                cout << "Opcao invalida!" << endl;
+        }
+
+    } while (opcao != 0);
+
+    return 0;
+}
+```
+
+**Conceitos utilizados**
+
+- `do while`: mantém o menu em execução.
+- `switch`: permite selecionar uma opção.
+- `case`: define as opções disponíveis.
+- `break`: encerra cada caso.
+- `default`: trata opções inválidas.
+
+Esse exemplo demonstra como diferentes estruturas de controle podem trabalhar juntas para construir programas mais completos.
+
+---
+
+## 8. Boas Práticas
+
+Ao trabalhar com estruturas de decisão e repetição, procure seguir algumas recomendações:
+
+1. Utilize nomes de variáveis que representem claramente sua finalidade.
+2. Evite condições excessivamente complexas.
+3. Tome cuidado para não criar loops infinitos acidentalmente.
+4. Utilize a estrutura de repetição adequada para cada situação.
+5. Evite aninhamentos desnecessariamente profundos.
+6. Utilize chaves `{}` para organizar os blocos de código.
+7. Prefira códigos simples, legíveis e fáceis de manter.
+
+---
+
+## 9. Resumo
+
+As estruturas de decisão e repetição são fundamentais para o desenvolvimento de programas.
+
+| Conceito | Finalidade |
+|---|---|
+| `if` | Executar código se uma condição for verdadeira. |
+| `if else` | Escolher entre dois caminhos. |
+| `else if` | Verificar várias condições. |
+| `switch` | Selecionar uma opção entre vários casos. |
+| `for` | Repetir código com controle de inicialização, condição e incremento. |
+| `while` | Repetir enquanto uma condição for verdadeira. |
+| `do while` | Executar pelo menos uma vez e depois verificar a condição. |
+| `break` | Interromper um loop ou uma estrutura `switch`. |
+| `continue` | Pular a iteração atual de um loop. |
+
+**Conclusão:** as estruturas de decisão permitem que os programas tomem decisões, enquanto as estruturas de repetição permitem automatizar tarefas. Juntas, elas possibilitam desenvolver algoritmos mais inteligentes, flexíveis e eficientes.
+
+---
+
+## 10. Exercícios para Praticar
+
+1. Crie um programa que verifique se um número é positivo, negativo ou zero.
+2. Crie um programa que receba três números e mostre qual é o maior.
+3. Utilize for para imprimir os números de 1 até 100.
+4. Utilize while para calcular a soma dos números de 1 até 10.
+5. Crie um menu interativo utilizando do while e switch.
+6. Utilize continue para imprimir somente os números ímpares de 1 até 20.
