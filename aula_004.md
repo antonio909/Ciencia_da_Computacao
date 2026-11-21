@@ -9,3 +9,14 @@ Em C++, cada variável precisa ter um tipo de dado definido, que determina quais
 Um tipo de dado (Data Type) define a natureza da informação que uma variável pode armazenar.
 
 Por exemplo:
+
+ ```cpp
+int idade = 18;
+float altura = 1.75;
+char inicial = 'A';
+bool aprovado = true;
+```
+
+Nesse exemplo, temos quatro variáveis com diferentes tipos de dados.
+
+## 2. Principais tipos de dados simples
